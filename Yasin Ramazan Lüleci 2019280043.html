@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+<h2>2019 Güz Döneminin ilk ödevi</h2>
+<br>
+<h2>Yasin Ramazan Lüleci 2019280043</h2> 
+	<label for="id1">Metin kutusu 1</label> 
+<input type='text' id='id1' onkeyup="onlyNumber(this)" />
+<br> 
+	<label for="id2">Metin kutusu 2</label> 
+<input type='text' id='id2' onkeyup="onlyNumber(this)" />  
+<br><br> 
+	<button type="button" onclick="topla()">Topla</button>" 
+<br><br> 
+<label for="id3">Metin kutusu 3</label> 
+<input type='text' id='id3' />  
+<br> 
+<label for="id4">Metin kutusu 4</label> 
+<input type='text' id='id4' />  
+<br><br> 
+<button type="button" onclick="birleþtir()">Yapýþtýr</button>
+</body> 
+<script>
+	function topla()    {
+		var sayý1 = Number(document.getElementById("id1").value);
+		var sayý2 = Number(document.getElementById("id2").value);
+		var Sonuç = sayý1 + sayý2;
+		Toplam = document.getElementById("id5");
+		alert(Sonuç);
+ 	}
+	</script>
+    
+	<script>
+    	function birleþtir() {
+        	var sayý3 =document.getElementById("id3").value;
+			var sayý4 =document.getElementById("id4").value;
+			var birleþme =sayý3 + " " + sayý4;
+            alert(birleþme);
+            }
+    </script>
+    
+    <script>
+    	function onlyNumber(nesne) {
+        	var nesneler = "0123456789";
+            var Numara= true;	
+            var Karakter;
+            for(i=0; i<nesne.value.length && Numara==true; i++) {
+            	Karakter = nesne.value.charAt(i);
+                if(nesneler.indexOf(Karakter) == -1) {
+                	nesne.value = nesne.value.substring(0,i);
+                    break;
+                }    
+            }
+       		return Numara;
+         }    
+     </script>
+</html> 
